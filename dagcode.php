@@ -15,7 +15,7 @@ if ($_SESSION["rol"] != "docent") {
         echo "<script type='text/javascript'>window.location.href = 'menu.php';</script>";
     
     }
-    if ($_POST["tonen"]) {
+    if (isset($_POST["tonen"])) {
         $datum = $_POST["datum"];
         $type = $_POST["type"];
         $sql = "select * from dagcode 

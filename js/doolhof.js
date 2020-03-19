@@ -17,6 +17,17 @@ var doolhof3 = [ [1,1,0,0],[1,0,1,1],[1,1,0,0],[1,0,0,1],[1,1,1,0],
                 [0,0,1,1],[1,0,1,0],[1,0,1,0],[0,1,1,0],[0,0,1,1]];
 var eindpunt = ["r1k5", "r4k5", "r5k5"];
 var pos=0;
+function opgeven () {
+    document.getElementById("oplossing").disabled = "true";
+    document.getElementById("opnieuw").disabled = "true";
+    document.getElementById("opgeven").disabled = "true";
+    
+    //leg het aantalSterren vast
+    var aantalSterren = 0;
+    updateSterren(aantalSterren)       
+    document.getElementById("nextLevel").style.display="block";
+
+}
 function opnieuw() {
     for (var i=1;i<=20;i++) {
         document.getElementById("oplos" + i).innerHTML="";
@@ -44,6 +55,7 @@ function maak(nummer) {
     document.getElementById("start").disabled=true;
     document.getElementById("oplossing").disabled=false;
     document.getElementById("opnieuw").disabled=false;
+    document.getElementById("opgeven").disabled=false;
 
     switch (nummer) {
         case 1 : var doolhof = doolhof1;break;
@@ -185,6 +197,7 @@ function doolhofOpgelost() {
     } else {
         document.getElementById("oplossing").disabled = "true";
         document.getElementById("opnieuw").disabled = "true";
+        document.getElementById("opgeven").disabled = "true";
         
         //leg het aantalSterren vast
         var aantalSterren = parseInt(document.getElementById("aantalSterren").innerHTML);

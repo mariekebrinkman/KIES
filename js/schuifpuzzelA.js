@@ -45,8 +45,8 @@ var nietGelukt= false;
 function eindTijd () {
     clearInterval(stopwatch);
     document.getElementById("resultaat").innerHTML ="<h1 class='message'>Tijd is voorbij!</h1>"
-    var aantalSterren = parseInt(document.getElementById("aantalSterren").innerHTML) - 1;
-
+    var aantalSterren = parseInt(document.getElementById("aantalSterren").innerHTML) - 2;
+  
     if (aantalSterren >= 0 ) {
         document.getElementById("aantalSterren").innerHTML = aantalSterren;
     }
@@ -192,6 +192,12 @@ var duur=0;
             document.getElementById("schud").disabled=true;
             clearInterval(stopwatch);
             clearTimeout(timer);
+            if (duur<10) {
+              var aantalSterren = parseInt(document.getElementById("aantalSterren").innerHTML) - 1;
+              if (aantalSterren >= 0 ) {
+                  document.getElementById("aantalSterren").innerHTML = aantalSterren;
+              }
+            }
             if (pos<2) {
               document.getElementById("puzzel"+(pos)).style.display="none";
               document.getElementById("puzzel"+(pos+1)).style.display="block";
@@ -332,8 +338,8 @@ var duur=0;
     pos=imgPos;
     switch (imgPos) {
       case 0: duur = 10; break;
-      case 1: duur = 60; break;
-      case 2: duur = 60; break;
+      case 1: duur = 100; break;
+      case 2: duur = 100; break;
     }
     
     //console.log(imgPos);

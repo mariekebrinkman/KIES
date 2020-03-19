@@ -32,7 +32,8 @@ if (!isset($_SESSION["rol"])) {
         <p></p>Hieronder zie je een foto. Als je op de foto klikt wordt dit een schuifpuzzel. 
         Bekijk de foto eerst goed. Als je op start puzzel klikt krijg je de foto in stukjes te zien.
         Maak zo snel mogelijk de puzzel. 
-        Let op je hebt maar een beperkte tijd. Los je de puzzel niet op binnen de tijd, dan kost je dat een ster.
+        Let op je hebt maar een beperkte tijd. Los je de puzzel niet op binnen de tijd, dan kost je dat 2 sterren. 
+        Heb je nog maar 10 seconden over, dan kost je het 1 ster.
         Er komen 3 verschillende afbeeldingen. </p>
         <p>&nbsp;</p>
         <button name="nmbtnStart" id="puzzel0" onclick="startPicture()" >Start</button>

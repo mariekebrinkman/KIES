@@ -34,7 +34,7 @@ if (!isset($_SESSION["rol"])) {
     Dit doe je door de juiste pijltjes te slepen naar het rechterveld. Zet in elk hokje 1 pijltje. 
     Een stap is gelijk aan 1 hokje. Ben je klaar, klik dan op Check oplossing.
     Heb je een foutje gemaakt klik dan opnieuw beginnen. Ontdekt de computer een fout, dan kost je dat een ster. 
-    Je krijgt maximaal 5 sterren voor deze opdracht.
+    Je krijgt maximaal 5 sterren voor deze opdracht. Als het niet lukt, kan je opgeven, dan krijg je 0 sterren.
     <p>De eerste stap zet je in het eerste hokje, de volgende stap in het hokje daarnaast enzovoort. 
 </p>Hieronder staat een voorbeeld. Druk op oplossing om de oplossing te zien.
     <div id="voorbeeld">
@@ -151,6 +151,7 @@ if (!isset($_SESSION["rol"])) {
     <div class="buttonRow">
         <button id="oplossing" onclick="oplossing()" disabled>Check oplossing</button>
         <button id="opnieuw" onclick="opnieuw()" disabled>Opnieuw beginnen</button>
+        <button id="opgeven" onclick="opgeven()" disabled>Opgeven</button>
     </div>
 </div>
 </div>
